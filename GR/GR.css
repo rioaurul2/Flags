@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    width: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+
+.container{
+    width: 60vh;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.container div:nth-child(3){
+    grid-column: span 3;
+}
+
+.first{ 
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.first div:nth-child(1){
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.first div:nth-child(2){
+    grid-row: span 5;
+}
+.first div:nth-child(3){
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.first div:nth-child(4){
+    grid-column: span 2;
+}
+.first div:nth-child(5){
+    grid-column: span 2;
+}
+.first div:nth-child(6){
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.first div:nth-child(7){
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.second{
+    display: flex;
+    flex-direction: column;
+}
+.second div{
+    width: 100%;
+    height: 20%;
+}
+
+.third{
+    display: flex;
+    flex-direction: column;
+}
+.third div{
+    width: 100%;
+    height: 25%;
+}
+
+.white{
+    background-color: aliceblue;
+}
+
+.blue{
+    background-color: #31a6b6;
+}

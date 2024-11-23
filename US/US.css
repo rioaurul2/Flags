@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+
+.container{
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.container > div:nth-child(1) {
+    grid-column: span 2;
+}
+.container > div:nth-child(2) {
+    grid-column: span 3;
+}
+.container > div:nth-child(3) {
+    grid-column: span 5;
+}
+
+.red{
+    background-color: rgb(187, 9, 9);
+}
+.white{
+    background-color: white;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;  
+}
+
+.section div{
+    height: 100%;
+}
+
+.star-section{
+display: grid;
+grid-template-columns: repeat(11, 9.09%);
+}
+
+
+.star-section{
+    background-color: blue;
+
+}
+.star-section div:nth-child(2n-1) {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star-section div:nth-child(2n-1)::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+}
+
